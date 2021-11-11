@@ -1,0 +1,3 @@
+<?
+echo "header works congrats";
+?>
