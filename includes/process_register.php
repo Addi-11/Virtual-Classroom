@@ -10,8 +10,9 @@ $phone_number = $_POST['phone-number'];
 $gender = $_POST['gender'];
 $vaccine_stat = $_POST['vaccination-status'];
 
+$table_name='users';
 
-$query1 = "INSERT INTO users (name, profession, email, phone_number, gender, vaccine_stat, password) VALUES ('$full_name','$profession','$email','$phone_number','$gender','$vaccine_stat','$password')";
+$query1 = "INSERT INTO ".$table_name." (name, profession, email, phone_number, gender, vaccine_stat, password) VALUES ('$full_name','$profession','$email','$phone_number','$gender','$vaccine_stat','$password')";
 
 $result1 = mysqli_query($conn, $query1);
 
