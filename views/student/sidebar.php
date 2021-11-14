@@ -60,7 +60,7 @@
                 <i class="discourse icon"></i> Discuss
             </a>
             <div class="bottom-aligned">
-                <a class="item">
+                <a class="item" href="../logout.php">
                     <i class="sign-out alternate icon"></i> Logout
                 </a>
             </div>

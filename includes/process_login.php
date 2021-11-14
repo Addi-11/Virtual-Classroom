@@ -14,13 +14,13 @@ if (($result > 0)) {
     $profession = $result['profession'];
     if ($profession == "teacher") {
         session_start();
-        // $_SESSION["id"] = $result['email'];
+        $_SESSION["id"] = $result['email'];
         $_SESSION["type"] = $profession;
         header('location: ../views/teacher/home.php');
     } 
     else if ($profession == "Student") {
         session_start();
-        // $_SESSION["id"] = $result['email'];
+        $_SESSION["id"] = $result['email'];
         $_SESSION["type"] = $profession;
         header('location:  ../views/student/home.php');
     }
