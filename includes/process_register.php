@@ -1,4 +1,4 @@
-<?php
+<?php   
 session_start();
 require_once('config.php');
 
@@ -21,7 +21,9 @@ echo $profession;
 if (!$result1) {
     echo ("Can't Register,The user email already exist !!");
 } else {
-    $_SESSION['user_id'] = mysqli_insert_id($conn);
+    $_SESSION['id'] = mysqli_insert_id($conn);
+    $_SESSION['name'] = $full_name;
+    
     echo "Information successfully added to DB";
     if ($profession == "teacher") {
         header('location: ../views/teacher/home.php');
