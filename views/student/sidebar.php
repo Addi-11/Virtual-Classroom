@@ -46,9 +46,9 @@
 
 
     <div class="ui bottom attached segment pushable">
-        <div class="ui inverted labeled icon left inline vertical sidebar menu uncover visible">
-            <a class="item" href="home.php">
-                <i class="home icon"></i> Dashboard
+        <div class="ui inverted labeled icon left inline vertical sidebar fixed menu">
+            <a class=" item" href="home.php">
+            <i class="home icon"></i> Dashboard
             </a>
             <a class="item" href="classes.php">
                 <i class="block layout icon"></i> My Classes
