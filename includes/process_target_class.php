@@ -26,15 +26,16 @@ foreach ($classroom_codes as $code) {
 ?>
 
 <!-- Card HTML starts -->
-    <a class="card" href="class_stream.php">
+    <a class="card" href="class_stream.php" style="color:inherit;">
         <div class="content">
-            <div class="header"><?= $result["subject_name"]; ?></div>
-            <div class="meta"><?= $result["subject_code"]; ?></div>
-            <!-- <div class="ui divider"></div> -->
-            <div class="description">
-                <div class="ui sub header"><?= $result["batch"]; ?></div>
-                <div class="ui sub header"><?= $result["section"]; ?></div>
-                <div class="ui sub header"><?= $result["room_number"]; ?></div>
+            <h2 class="ui header"><?= $result["subject_name"]; ?>
+            <div class="ui sub header"><?= $result["subject_code"]; ?></div>
+            </h2>
+            <div class="ui divider"></div>
+            <div class="meta">
+                Batch: <?= $result["batch"]; ?><br>
+                Section: <?= $result["section"]; ?><br>
+                Room Number: <?= $result["room_number"]; ?><br>
             </div>
         </div>
     </a>
