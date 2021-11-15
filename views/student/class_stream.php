@@ -27,7 +27,7 @@ $result = $_SESSION["result"];
         </div>
 
         <div class="ui grid">
-            <div class="three wide column ">
+            <div class="four wide column ">
                 <div class="ui cards">
                     <div class="card">
                         <div class="content">
@@ -42,7 +42,7 @@ $result = $_SESSION["result"];
                     </div>
                 </div>
             </div>
-            <div class="thirteen wide column">
+            <div class="twelve wide column">
                 <div class="ui fluid icon input">
                     <input type="text" placeholder="Announce something to your class...">
                     <i class="bullhorn icon"></i>
