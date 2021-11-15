@@ -73,6 +73,12 @@ include_once 'partials/header.php';
             </div>
         </div>
         <button class="ui button" type="submit" name="register-button">Register</button>
+        <div class="field">
+            <div class="ui header"></div>
+            <label style="text-align:right">
+                <a href="login.php">Already Registered?</a>
+            </label>
+        </div>
     </form>
 </div>
 
