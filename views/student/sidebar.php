@@ -9,46 +9,40 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="../stylesheets/sidebar.css">
-
+    <link rel="stylesheet" href="../../stylesheets/sidebar.css">
 
 </head>
 
 <body>
     <div class="ui top attached demo menu">
 
-        <a class="item">
-            <div class="ui header">
-                <img src="../../images/octocat.png">
-                Octocat
-            </div>
-        </a>
-        <div class="item">
-            <div class="ui search">
-                <div class="ui icon input">
-                    <input class="prompt" type="text" placeholder="Search ...">
-                    <i class="search icon"></i>
-                </div>
-                <div class="results"></div>
-            </div>
+        <div class="ui header item" style="margin-left:180px;">
+            <img class="ui circular image" src="../../images/student.jpg">
+            Welcome Back Student!!
         </div>
-        <div class="right menu">
 
+        <div class="right menu">
             <div class="item">
-                <img class="ui mini circular image" src="../../images/student.jpg">
-                <div class="content">
-                    <div class="ui sub header">Molly Singh</div>
-                    Student
+                <div class="ui search">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="Search ...">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
                 </div>
             </div>
+            <a class="item">
+                <div class="ui header">
+                    <img src="../../images/octocat.png">
+                    Octocat
+                </div>
+            </a>
         </div>
     </div>
 
-
-    <div class="ui bottom attached segment pushable">
-        <div class="ui inverted labeled icon left inline vertical sidebar fixed menu">
+    <div class="ui left fixed vertical inverted labeled icon menu flex-container">
             <a class=" item" href="home.php">
-            <i class="home icon"></i> Dashboard
+                <i class="home icon"></i> Dashboard
             </a>
             <a class="item" href="classes.php">
                 <i class="block layout icon"></i> My Classes

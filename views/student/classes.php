@@ -1,10 +1,9 @@
 <?php
 include_once 'sidebar.php';
 ?>
-<div class="pusher">
+<div class="left-container">
     this is the classes section!!
    
-</div>
 </div>
 
 

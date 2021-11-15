@@ -1,14 +1,13 @@
 <?php
 include_once 'sidebar.php';
 ?>
-<div class="pusher">
+<div class="left-container">
 
     <div class="ui grid">
         <div class="olive eleven wide column"></div>
         <div class="black five wide column"></div>
     </div>
 
-</div>
 </div>
 
 

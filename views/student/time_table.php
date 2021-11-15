@@ -1,9 +1,8 @@
 <?php
 include_once 'sidebar.php';
 ?>
-<div class="pusher">
+<div class="left-container">
 lets enter the time table here
-</div>
 </div>
 
 
