@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="ui top attached demo menu">
+    <div class="ui top borderless attached demo menu">
 
         <div class="ui header item" style="margin-left:180px;">
             <img class="ui circular image" src="../../images/student.jpg">
