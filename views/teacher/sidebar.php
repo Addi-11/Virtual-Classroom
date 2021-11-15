@@ -14,11 +14,14 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+    ?>
     <div class="ui top borderless attached demo menu">
 
         <div class="ui header item" style="margin-left:180px;">
             <img class="ui circular image" src="../../images/teacher.png">
-                Welcome Back John!!
+            Welcome Back <?= $_SESSION['name']; ?>!!!
         </div>
 
         <div class="right menu">
@@ -31,13 +34,6 @@
                     <div class="results"></div>
                 </div>
             </div>
-            <!-- <div class="item">
-                <img class="ui mini circular image" src="../../images/teacher.png">
-                <div class="content">
-                    <div class="ui sub header">Johny Deep</div>
-                    Teacher
-                </div>
-            </div> -->
             <a class="item">
                 <div class="ui header">
                     <img src="../../images/octocat.png">

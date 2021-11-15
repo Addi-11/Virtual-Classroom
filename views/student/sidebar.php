@@ -14,11 +14,14 @@
 </head>
 
 <body>
-    <div class="ui top borderless attached demo menu">
+    <?php
+    session_start();
+    ?>
 
+    <div class="ui top borderless attached demo menu">
         <div class="ui header item" style="margin-left:180px;">
             <img class="ui circular image" src="../../images/student.jpg">
-            Welcome Back Student!!
+            Welcome Back <?= $_SESSION['name']; ?>!!!
         </div>
 
         <div class="right menu">
@@ -41,21 +44,21 @@
     </div>
 
     <div class="ui left fixed vertical inverted labeled icon menu flex-container">
-            <a class=" item" href="home.php">
-                <i class="home icon"></i> Dashboard
+        <a class=" item" href="home.php">
+            <i class="home icon"></i> Dashboard
+        </a>
+        <a class="item" href="classes.php">
+            <i class="block layout icon"></i> My Classes
+        </a>
+        <a class="item" href="time_table.php">
+            <i class="table icon"></i> My Timetable
+        </a>
+        <a class="item">
+            <i class="discourse icon"></i> Discuss
+        </a>
+        <div class="bottom-aligned">
+            <a class="item" href="../logout.php">
+                <i class="sign-out alternate icon"></i> Logout
             </a>
-            <a class="item" href="classes.php">
-                <i class="block layout icon"></i> My Classes
-            </a>
-            <a class="item" href="time_table.php">
-                <i class="table icon"></i> My Timetable
-            </a>
-            <a class="item">
-                <i class="discourse icon"></i> Discuss
-            </a>
-            <div class="bottom-aligned">
-                <a class="item" href="../logout.php">
-                    <i class="sign-out alternate icon"></i> Logout
-                </a>
-            </div>
         </div>
+    </div>
