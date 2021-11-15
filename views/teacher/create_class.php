@@ -11,10 +11,6 @@ include_once 'sidebar.php';
     <div class="ui header">Create Class</div>
     <form class="ui form" action="../../includes/process_create_class.php" method="post">
         <div class="field">
-            <label>Class Room Code</label>
-            <input type="text" name="classroom_code" placeholder="Class Room Code" required>
-        </div>
-        <div class="field">
             <label>Subject Name</label>
             <input type="text" name="subject_name" placeholder="Subject Name" required>
         </div>

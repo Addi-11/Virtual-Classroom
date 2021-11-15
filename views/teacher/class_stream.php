@@ -1,6 +1,8 @@
 <?php
 include_once 'sidebar.php';
+$result = $_SESSION["result"];
 ?>
+
 <div class="left-container">
     <div class="ui top attached tabular menu">
         <a class="active item" href="class_stream.php">
@@ -21,12 +23,12 @@ include_once 'sidebar.php';
             <!-- <div class="ui large header">Subject Name</div>
             <div class="ui medium header">Subject Code</div> -->
             <h1 class="ui header">
-                Subject Name
-                <div class="sub header">Subject Code</div>
+                <?= $result["subject_name"] ?>
+                <div class="sub header"><?= $result["subject_code"] ?></div>
             </h1>
-            <div class="sub header"> Batch</div>
-            <div class="sub header"> Section</div>
-            <div class="sub header"> Room Number</div>
+            <div class="sub header"><?= $result["batch"] ?></div>
+            <div class="sub header"><?= $result["section"] ?></div>
+            <div class="sub header"><?= $result["room_number"] ?></div>
         </div>
 
         <div class="ui grid">
@@ -36,7 +38,7 @@ include_once 'sidebar.php';
                         <div class="content">
                             <div class="ui tiny header">Class Code :</div>
                             <div class="ui huge header ">
-                                xyz34
+                                <?= $result["classroom_code"] ?>
                                 <span class="right floated">
                                     <i class="copy icon"></i>
                                 </span>
@@ -56,6 +58,7 @@ include_once 'sidebar.php';
     </div>
 
 </div>
+
 
 
 </body>

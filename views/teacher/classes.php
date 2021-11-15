@@ -2,16 +2,28 @@
 include_once 'sidebar.php';
 ?>
 <div class="left-container">
-    testing text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti quod odit fuga suscipit a obcaecati quas quidem numquam minus nobis nesciunt, facilis quo voluptas unde sed reiciendis voluptatem soluta qui!
-        <form action=" create_class.php">
-    <button class="ui right floated button">
-        Create Classroom
-    </button>
-    </form>
+    <div class="ui grid">
+        <div class="sixteeen wide column">
+            <form action="create_class.php">
+                <button class="ui right floated button">
+                    Create Classroom
+                </button>
+            </form>
+        </div>
+        <div class="sixteen wide column">
 
+        </div>
+    </div>
+    <div class="ui cards">
+        <?php
+
+        include_once '../../includes/process_target_class.php';
+
+        ?>
+            
+
+    </div>
 </div>
-<!-- </div> -->
-
 
 </body>
 

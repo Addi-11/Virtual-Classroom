@@ -23,6 +23,8 @@ if (!$result1) {
 } else {
     $_SESSION['id'] = mysqli_insert_id($conn);
     $_SESSION['name'] = $full_name;
+    $_SESSION["error"]='0';
+    $_SESSION["profession"]=$profession;
     
     echo "Information successfully added to DB";
     if ($profession == "teacher") {

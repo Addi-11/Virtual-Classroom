@@ -3,7 +3,7 @@
 session_start();
 require_once('config.php');
 
-$classroom_code=$_POST['classroom_code'];
+$classroom_code= uniqid();
 $teacher_name=$_SESSION['name'];
 $subject_name=$_POST['subject_name'];
 $subject_code=$_POST['subject_code'];
@@ -12,8 +12,8 @@ $section=$_POST['section'];
 $room_number=$_POST['room_number'];
 
 $table_name = 'classrooms';
-
-$query1 = "INSERT INTO " . $table_name . " (classroom_code,	teacher_name, subject_name,	subject_code,	batch,	section,	room_number) VALUES ('$classroom_code','$teacher_name','$subject_name','$subject_code','$batch','$section','$room_number')";
+$user_id=$_SESSION["id"];
+$query1 = "INSERT INTO " . $table_name . " (classroom_code,user_id,	teacher_name, subject_name,	subject_code,	batch,	section,	room_number) VALUES ('$classroom_code','$user_id','$teacher_name','$subject_name','$subject_code','$batch','$section','$room_number')";
 
 $result1 = mysqli_query($conn, $query1);
 

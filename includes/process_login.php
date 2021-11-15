@@ -14,15 +14,20 @@ if (($result > 0)) {
     $profession = $result['profession'];
     if ($profession == "teacher") {
         session_start();
+        $_SESSION["error"]='0';
         $_SESSION["id"] = $result['id'];
         $_SESSION["name"]=$result['name'];
         $_SESSION["type"] = $profession;
+        $_SESSION["profession"]=$profession;
         header('location: ../views/teacher/home.php');
     } 
     else if ($profession == "Student") {
         session_start();
+        $_SESSION["error"]='0';
         $_SESSION["id"] = $result['id'];
+        $_SESSION["name"]=$result['name'];
         $_SESSION["type"] = $profession;
+        $_SESSION["profession"]=$profession;
         header('location:  ../views/student/home.php');
     }
 } else {
