@@ -2,8 +2,11 @@
 include_once 'sidebar.php';
 ?>
 <div class="left-container">
-    this is the classes section!!
-   
+    <form action="join_class.php">
+        <button class="ui right floated button">
+            Join Classroom
+        </button>
+    </form>
 </div>
 
 
