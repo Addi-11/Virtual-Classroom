@@ -17,10 +17,16 @@ include_once 'sidebar.php';
         </a>
     </div>
     <div class="ui bottom attached segment">
-        <button class="ui button">
-            <i class="plus icon"></i>
-            Create
-        </button>
+        <div class="ui grid">
+            <div class="sixteen wide column">
+                <form action="create_classwork.php">
+                    <button class="ui button">
+                        <i class="plus icon"></i>
+                        Create
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
 </div>
