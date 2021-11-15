@@ -4,15 +4,27 @@ session_start();
 require_once('config.php');
 
 $classroom_code=$_POST['classroom_code'];
-echo "joined class ".$classroom_code;
-// $table_name = 'classrooms';
+$user_id=$_SESSION["id"];
 
-// $query = "INSERT INTO " . $table_name . " (classroom_code,	teacher_name, subject_name,	subject_code,	batch,	section,	room_number) VALUES ('$classroom_code','$teacher_name','$subject_name','$subject_code','$batch','$section','$room_number')";
+$table_name = 'class_student';
 
-// $result = mysqli_query($conn, $query1);
+// check if input code matches exsisiting classroom code
+$flag=mysqli_query($conn,"Select * from classrooms where classroom_code='$classroom_code'");
+$flagcheck=mysqli_fetch_array($flag, MYSQLI_ASSOC);
 
-// if(!$result){
-// 	echo ("Can't join the classroom !!");
-// }else{
-//     header('location: ../views/student/classes.php');
-// }
+if($flagcheck<1){
+    // show msg not classroom   
+    $_SESSION['error']="Invalid Classroom Code.";
+    header('location: ../views/student/join_class.php');
+} else{
+    $query = "INSERT INTO " . $table_name ." VALUES('$classroom_code','$user_id')";
+    $result = mysqli_query($conn, $query);
+
+    if(!$result){
+        echo ("Can't join the classroom !!");
+    }else{
+        header('location: ../views/student/classes.php');
+    }
+}
+
+?>

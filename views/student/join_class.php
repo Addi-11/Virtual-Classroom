@@ -1,8 +1,15 @@
 <?php
-include_once 'sidebar.php';
+    include_once 'sidebar.php';
 ?>
+
 <br>
 <div id="login-container" class="ui raised very padded text container segment ">
+    <?php
+    if ($_SESSION["error"] == "Invalid Classroom Code.") {
+        include '../error.php';
+        $_SESSION["error"]="0"; // reset variable 
+    }
+    ?>
     <a class="item" href="classes.php">
         <i class="arrow alternate circle left icon"></i>
         Back
