@@ -1,7 +1,7 @@
 <?php
 include_once 'sidebar.php';
 ?>
-<div class="pusher">
+<div class="left-container">
     Techer section
     <div class="ui grid">
         <div class="olive eleven wide column"></div>

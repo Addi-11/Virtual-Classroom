@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bottom-aligned {
+    margin: 0px;
+    margin-top: auto;
+}
+
+.left-container {
+    margin-left: 200px;
+}
