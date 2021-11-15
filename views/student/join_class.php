@@ -4,8 +4,8 @@ include_once 'sidebar.php';
 <br>
 <div id="login-container" class="ui raised very padded text container segment ">
     <a class="item" href="classes.php">
-    <i class="arrow alternate circle left"></i>
-    Back
+        <i class="arrow alternate circle left icon"></i>
+        Back
     </a>
     <div class="ui header">Join Class</div>
     <form class="ui form" action="../../includes/process_join_class.php" method="post">

@@ -4,6 +4,10 @@ include_once 'sidebar.php';
 <br><br>
 
 <div id="login-container" class="ui raised very padded text container segment ">
+    <a class="item" href="classes.php">
+        <i class="arrow alternate circle left icon"></i>
+        Back
+    </a>
     <div class="ui header">Create Class</div>
     <form class="ui form" action="../../includes/process_create_class.php" method="post">
         <div class="field">
