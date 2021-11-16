@@ -1,6 +1,6 @@
  <?php
-    //  get all comments fro given class-chat ordered by date
-    $query = mysqli_query($conn, "select  class_comments.comment,  users.name from class_comments, users where ( class_comments.classroom_code='abcd3' and users.id = class_comments.user_id) order by class_comments.date_time;");
+    //  get all comments for given class-chat ordered by date
+    $query = mysqli_query($conn, "select class_comments.comment,  users.name from class_comments, users where ( class_comments.classroom_code='".$class_code."' and users.id = class_comments.user_id) order by class_comments.date_time;");
     $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 

@@ -27,9 +27,9 @@
             </div>
         </div>
         <div class="twelve wide column">
-            <form action="../../includes/process_class_comments.php" method="post">
+            <form action="../../includes/process_class_comments.php?class_code=<?php echo $class_code; ?>" method="post">
                 <div class="ui fluid icon input">
-                    <input type="text" placeholder="Announce something to your class...">
+                    <input type="text" name="comment" placeholder="Announce something to your class...">
                     <button class="ui right labeled icon button">
                         <i class="paper plane outline icon"></i>
                         Post
