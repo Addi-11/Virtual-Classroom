@@ -1,6 +1,9 @@
 <?php
-include_once 'sidebar.php';
-$result = $_SESSION["result"];
+    include_once 'sidebar.php';
+    $class_code = $_GET["class_code"];
+    include_once '../../includes/config.php';
+    $query = mysqli_query($conn, "select * from classrooms where classroom_code='$class_code'");
+    $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 ?>
 
 <div class="left-container">
