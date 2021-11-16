@@ -20,7 +20,7 @@ $class_code = $_GET["class_code"];
     <div class="ui bottom attached segment">
         <div class="ui grid">
             <div class="sixteen wide column">
-                <form action="create_classwork.php">
+                <form action="create_classwork.php?class_code=<?php echo $class_code; ?>" method="post">
                     <button class="ui button">
                         <i class="plus icon"></i>
                         Create

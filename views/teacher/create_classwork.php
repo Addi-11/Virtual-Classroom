@@ -1,12 +1,13 @@
 <?php
 include_once 'sidebar.php';
+$class_code = $_GET["class_code"];
 ?>
 
 <div class="left-container">
 
     <div class="ui grid">
         <div class="sixteen wide column">
-            <a class="item" href="classwork.php">
+            <a class="item" href="classwork.php?class_code=<?php echo $class_code; ?>">
                 <i class="arrow alternate circle left icon"></i>
                 Back
             </a>
