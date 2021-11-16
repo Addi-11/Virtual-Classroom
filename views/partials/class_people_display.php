@@ -21,12 +21,12 @@ $teacher_result = mysqli_fetch_all($teacher_query, MYSQLI_ASSOC);
                     </div>
                 </div>
                 <div class="ui middle aligned list">
-                    <?php foreach ($student_result as $student) { ?>
+                    <?php foreach ($teacher_result as $teacher) { ?>
                         <div class="item">
                             <img class="ui avatar image" src="../../images/teacher.png">
                             &ensp;
                             <span style="font-size:18px">
-                                <?= implode(" ", $student) ?>
+                                <?= implode(" ", $teacher) ?>
                             </span>
                         </div>
                     <?php } ?>
@@ -41,12 +41,12 @@ $teacher_result = mysqli_fetch_all($teacher_query, MYSQLI_ASSOC);
                     </div>
                 </div>
                 <div class="ui middle aligned list">
-                    <?php foreach ($teacher_result as $teacher) { ?>
+                    <?php foreach ($student_result as $student) { ?>
                         <div class="item">
                             <img class="ui avatar image" src="../../images/student.jpg">
                             &ensp;
                             <span style="font-size:18px">
-                                <?= implode(" ", $teacher) ?>
+                                <?= implode(" ", $student) ?>
                             </span>
                         </div>
                     <?php } ?>
