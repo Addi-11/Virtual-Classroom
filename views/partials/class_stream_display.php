@@ -27,10 +27,18 @@
             </div>
         </div>
         <div class="twelve wide column">
-            <div class="ui fluid icon input">
-                <input type="text" placeholder="Announce something to your class...">
-                <i class="bullhorn icon"></i>
-            </div>
+            <form action="../../includes/process_class_comments.php" method="post">
+                <div class="ui fluid icon input">
+                    <input type="text" placeholder="Announce something to your class...">
+                    <button class="ui right labeled icon button">
+                        <i class="paper plane outline icon"></i>
+                        Post
+                    </button>
+                </div>
+            </form>
+
+            <?php include '../class_comments.php' ?>
+
         </div>
     </div>
 
