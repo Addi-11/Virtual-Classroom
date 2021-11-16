@@ -39,6 +39,6 @@ include_once 'partials/header.php';
 
 </body>
 
-<script src="../js/login.js" type="text/javascript"></script>
+<!-- <script src="../js/login.js" type="text/javascript"></script> -->
 
 </html>

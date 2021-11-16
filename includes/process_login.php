@@ -21,7 +21,7 @@ if (($result > 0)) {
         $_SESSION["profession"]=$profession;
         header('location: ../views/teacher/home.php');
     } 
-    else if ($profession == "Student") {
+    else if (strtolower($profession) == "student") {
         session_start();
         $_SESSION["error"]='0';
         $_SESSION["id"] = $result['id'];

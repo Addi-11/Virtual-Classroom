@@ -8,7 +8,7 @@ $table_name='classrooms';
 // echo $_SESSION["profession"];
 if($_SESSION["profession"]=="teacher"){
     $table_name="classrooms";
-}else if($_SESSION["profession"] == "Student"){
+}else if(strtolower($_SESSION["profession"]) == "student"){
     $table_name="class_student";
 }
 
