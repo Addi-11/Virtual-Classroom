@@ -18,52 +18,7 @@ $result = $_SESSION["result"];
             Marks
         </a>
     </div>
-    <div class="ui bottom attached segment">
-        <div class="ui block header">
-            <!-- <div class="ui large header">Subject Name</div>
-            <div class="ui medium header">Subject Code</div> -->
-            <h1 class="ui header">
-                <?= $result["subject_name"] ?>
-                <div class="sub header"><?= $result["subject_code"] ?></div>
-            </h1>
-            <div class="sub header"><?= $result["batch"] ?></div>
-            <div class="sub header"><?= $result["section"] ?></div>
-            <div class="sub header"><?= $result["room_number"] ?></div>
-        </div>
-
-        <div class="ui grid">
-            <div class="four wide column ">
-                <div class="ui cards">
-                    <div class="card">
-                        <div class="content">
-                            <div class="ui tiny header">Class Code :</div>
-                            <div class="ui huge header ">
-                                <?= $result["classroom_code"] ?>
-                                <span class="right floated">
-                                    <i class="copy icon"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="twelve wide column">
-                <div class="ui fluid icon input">
-                    <input type="text" placeholder="Announce something to your class...">
-                    <i class="bullhorn icon"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+    <?php
+    include_once '../partials/class_stream_display.php';
+    ?>
 </div>
-
-
-
-</body>
-
-
-<script src="../../js/sidebar.js" type="text/javascript"></script>
-
-</html>
