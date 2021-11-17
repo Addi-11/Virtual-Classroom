@@ -28,6 +28,7 @@ $class_code = $_GET["class_code"];
                 </form>
             </div>
         </div>
+        <?php include_once '../partials/classwork_display.php'  ?>
     </div>
 
 </div>

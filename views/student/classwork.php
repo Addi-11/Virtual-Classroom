@@ -16,7 +16,7 @@ $class_code = $_GET["class_code"];
         </a>
     </div>
     <div class="ui bottom attached segment">
-        <div class="ui padded segment">
+        <!-- <div class="ui padded segment">
             <form>
                 <span>Assignment-1</span>
                 <button class="ui button" style="position:absolute; top:12px; right:10px;">
@@ -24,7 +24,8 @@ $class_code = $_GET["class_code"];
                     View Assignment
                 </button>
             </form>
-        </div>
+        </div> -->
+        <?php include_once '../partials/classwork_display.php' ?>
     </div>
 
 </div>
