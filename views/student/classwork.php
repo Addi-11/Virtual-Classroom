@@ -14,12 +14,14 @@ $class_code = $_GET["class_code"];
         <a class="item" href="class_people.php?class_code=<?php echo $class_code; ?>">
             People
         </a>
-    </div>  
+    </div>
     <div class="ui bottom attached segment">
-        <div class="ui clearing segment">
+        <div class="ui padded segment">
             <form>
-                <button class="ui right floated button">
-                    Submit
+                <span>Assignment-1</span>
+                <button class="ui button" style="position:absolute; top:12px; right:10px;">
+                    <i class="eye icon"></i>
+                    View Assignment
                 </button>
             </form>
         </div>
