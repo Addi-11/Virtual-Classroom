@@ -1,7 +1,8 @@
 <?php
 include_once 'sidebar.php';
-$file_id = $_GET['file_id'];
 include_once '../../includes/config.php';
+$file_id = $_GET['file_id'];
+echo $file_id;
 
 // get all info from files
 $query = mysqli_query($conn, "Select * from files where file_id='$file_id'");
@@ -20,7 +21,7 @@ if ($result['due_date'] == '0000-00-00 00:00:00') {
 <div class="left-container">
     <div class="ui grid">
         <div class="sixteen wide column">
-            <a class="item" href="classwork.php?class_code=<?=$class_code?>">
+            <a class="item" href="classwork.php?class_code=<?= $class_code ?>">
                 <i class="arrow alternate circle left icon"></i>
                 Back
             </a>
@@ -50,7 +51,16 @@ if ($result['due_date'] == '0000-00-00 00:00:00') {
                 </div>
             </div>
         </div>
-        <div class="ui five wide column">
+        <div class="ui three wide column">
+            <?php
+                if($_SESSION['error']=="Empty submission"){
+                    include_once '../error.php';
+                    $_SESSION['error']='0'; //reset
+                } else if($_SESSION['error']=="Success"){
+                    include_once '../error.php';
+                    $_SESSION['error'] = '0'; //reset
+                }
+            ?>
             <div class="ui card">
                 <div class="content">
                     <span class="right floated">
@@ -59,12 +69,17 @@ if ($result['due_date'] == '0000-00-00 00:00:00') {
                     <div class="header">Your Work</div>
                 </div>
                 <div class="extra content">
-                    <button class="fluid ui basic button">
-                        <i class="plus icon"></i>
-                        Add or Create
-                    </button>
-                    <br>
+                    <form method="post" action="../../includes/process_submit_classwork.php?class_code=<?php echo $class_code; ?>" enctype="multipart/form-data">
+                    <input type="hidden" name="classwork_id" value="<?=$file_id?>">
+                        <!-- <button class="fluid ui basic button">
+                            <i class="plus icon"></i>
+                            Add or Create
+                        </button>
+                        <br> -->
+                    <input type="file" name="file_name">
+                    <br><br>
                     <button class="fluid ui button">Turn in</button>
+                    </form>
                 </div>
             </div>
             <div class="ui card">
