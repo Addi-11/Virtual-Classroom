@@ -1,7 +1,7 @@
 <?php
 include_once '../../includes/config.php';
 $profession=$_SESSION['profession'];
-$query=mysqli_query($conn,"Select classwork_title, file_id from files where classroom_code='$class_code'");
+$query=mysqli_query($conn,"Select classwork_title, file_id from files where classroom_code='$class_code' order by create_date desc");
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
 if($profession=="student"){
