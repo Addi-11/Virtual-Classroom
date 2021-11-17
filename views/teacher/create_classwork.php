@@ -10,13 +10,17 @@ $class_code = $_GET["class_code"];
             Back
         </a>
     </div>
-    <form class="ui form" method="post" action="../../includes/process_create_classwork.php?class_code=<?php echo $class_code; ?>">
+    <form class="ui form" method="post" action="../../includes/process_create_classwork.php?class_code=<?php echo $class_code; ?>" enctype="multipart/form-data">
         <div class="fields">
-            <div class="twelve wide field">
+            <div class="ten wide field">
                 <label>Title</label>
                 <input type="text" name="classwork_title" placeholder="Classwork Title">
             </div>
-            <div class=" four wide field">
+            <div class="three wide field">
+                <label>Topic</label>
+                <input type="text" name="classwork_topic" placeholder="Topic">
+            </div>
+            <div class=" two wide field">
                 <label>For</label>
                 <div class="ui dropdown selection">
                     <input type="hidden" name="gender" required>
@@ -29,28 +33,36 @@ $class_code = $_GET["class_code"];
             </div>
         </div>
         <div class="fields">
-            <div class="twelve wide field">
+            <div class="ten wide field">
                 <textarea name="classwork_inst" placeholder="Instructions(optional)"></textarea>
             </div>
             <div class="three wide field">
-                <label>Topic</label>
-                <input type="text" name="classwork_topic" placeholder="Topic">
+                <label>Due Date</label>
+                <input type="text" name="classwork_due_date" placeholder="YYYY-MM-DD">
             </div>
             <div class="one wide field">
                 <label>Points</label>
                 <input type="text" name="classwork_marks" placeholder="Points">
             </div>
         </div>
-        <a class="item">
+        <!-- <a class="item">
             <i class="upload icon"></i>
-        </a>
-        <a class="item">
+        </a> -->
+
+        <!-- <a class="item">
             <i class="linkify icon"></i>
-            <input type="file" id="file_name" name="file_name" style="display:none;">
         </a>
         <a class="item">
             <i class="plus icon"></i>
-        </a>
+        </a> -->
+        <div class="fields">
+            <div class="ten wide field">
+                <div class="image-upload">
+                    <i classs="upload icon"></i>
+                    <input id="file-input" stylde="color:red;"name="file_name" type="file" />
+                </div>
+            </div>
+        </div>
 
         <br><br>
         <button class="ui button" type="submit">Create Assignment</button>
