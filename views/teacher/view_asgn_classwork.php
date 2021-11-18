@@ -21,6 +21,9 @@
     if (isset($_POST['download_student_button'])) {
         include_once '../../includes/download_student.php';
     }
+    if (isset($_POST['submit_marks'])) {
+        include_once '../../includes/process_grading.php';
+    }
 ?>
 
 <div class="left-container">
@@ -63,7 +66,7 @@
             </div>
         </div>
         <div class="five wide column">
-            <?php include_once 'view_submissions.php'?>
+            <?php include_once 'grading.php'?>
         </div>
     </div>
 </div>

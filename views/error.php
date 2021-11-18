@@ -5,7 +5,7 @@
             Success!!
         </div>
     </div>
-<?php } else{?>
+<?php } else if($_SESSION['error']!='0'){?>
 
     <div class="ui negative message">
         <!-- <i class="close icon"></i> -->
@@ -15,4 +15,4 @@
             ?>
         </div>
     </div>
-<?php } ?>
+<?php } $_SESSION["error"]='0';?>
