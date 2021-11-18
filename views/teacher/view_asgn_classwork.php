@@ -16,7 +16,10 @@
         $result['due_date'] = 'None';
     }
     if (isset($_POST['download_button'])) {
-        include_once '../../includes/download.php';
+        include_once '../../includes/download_teacher.php';
+    }
+    if (isset($_POST['download_student_button'])) {
+        include_once '../../includes/download_student.php';
     }
 ?>
 

@@ -20,4 +20,3 @@ if (file_exists($filepath)) {
     header('Content-Length: ' . filesize('uploads/' .$name ));
     readfile('uploads/' . $name);
 }
-?>

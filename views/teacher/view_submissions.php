@@ -6,10 +6,14 @@ $classwork_id=$file_id;
 $query=mysqli_query($conn, "select users.name, student_submission.submission_file_id, student_submission.submission_file_extension, student_submission.submission_date from users, student_submission where (users.id=student_submission.user_id and classwork_id='$classwork_id')");
 $result=mysqli_fetch_all($query,MYSQLI_ASSOC);
 
+
 foreach($result as $student){
-    echo $student['name'];
-}
-?>
+    echo $student['name'].'<br>';?>
+    <form method="post">
+        <input type="hidden" name='file_id' value="<?=$student['submission_file_id']?>">
+        <input type="submit" name="download_student_button" value="Download Files" />
+    </form>
+<?php }?>
 
 
 <!-- // <div class="ui middle aligned list">
