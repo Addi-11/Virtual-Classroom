@@ -7,12 +7,15 @@ $classwork_id=$_POST['classwork_id'];
 $submission_file_name = $_FILES['file_name']['name']; 
 $submission_file_size = $_FILES['file_name']['size'];
 $submission_file_id = uniqid(); //unique
-$submission_file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
+$submission_file_extension = pathinfo($submission_file_name, PATHINFO_EXTENSION);
 date_default_timezone_set('Asia/Kolkata');
 $submission_date= date('Y-m-d H:i:s');
 
+
 $targetfolder = "../uploads/";
 $targetfolder = $targetfolder . $submission_file_id;
+$targetfolder=$targetfolder.".".$submission_file_extension;
+echo $targetfolder;
 
 $table_name='student_submission';
 $url= '../views/student/submit_classwork.php?file_id='.$classwork_id;

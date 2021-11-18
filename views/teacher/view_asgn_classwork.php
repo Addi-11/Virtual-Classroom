@@ -59,5 +59,8 @@
                 <?php } ?>
             </div>
         </div>
+        <div class="five wide column">
+            <?php include_once 'view_submissions.php'?>
+        </div>
     </div>
 </div>
