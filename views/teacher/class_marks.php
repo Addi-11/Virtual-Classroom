@@ -18,7 +18,7 @@ $class_code = $_GET["class_code"];
         </a>
     </div>
     <div class="ui bottom attached segment">
-        Lets see your marks
+        <?php include_once 'class_marks_display.php'?>
     </div>
 
 </div>
