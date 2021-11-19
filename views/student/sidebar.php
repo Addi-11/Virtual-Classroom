@@ -19,6 +19,11 @@
 <body>
     <?php
     session_start();
+    // to avoid unauthorized access checking for profession
+    if ($_SESSION["profession"] == "student") {
+        $_SESSION["error"] = "Unauthorized Access";
+        header('location: ../login.php');
+    }
     ?>
 
     <div class="ui top borderless attached demo menu">
