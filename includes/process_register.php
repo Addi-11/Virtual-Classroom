@@ -5,7 +5,7 @@ require_once('config.php');
 $profession = $_POST['profession'];
 $full_name = $_POST['name'];
 $email = $_POST['mail-id'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $phone_number = $_POST['phone-number'];
 $gender = $_POST['gender'];
 $vaccine_stat = $_POST['vaccination-status'];

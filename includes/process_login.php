@@ -2,15 +2,15 @@
 require_once('config.php');
 
 $login_id = $_POST['login-id'];
-$login_pass = $_POST['login-password'];
-
-
+// $login_pass = password_verify($_POST['login-password'], password_hash($_POST['password'], PASSWORD_DEFAULT));
+echo $login_pass;
 $table_name = 'users';
 
-$query = mysqli_query($conn, "select * from ".$table_name." where email='$login_id' and password='$login_pass'");
+$query = mysqli_query($conn, "select * from ".$table_name." where email='$login_id'");
+
 $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-if (($result > 0)) {
+if (($result > 0 && password_verify($_POST['login-password'],$result['password']))) {
     $profession = $result['profession'];
     if ($profession == "teacher") {
         session_start();
