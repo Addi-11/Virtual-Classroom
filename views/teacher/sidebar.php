@@ -19,7 +19,7 @@
 
 <body>
     <?php
-    session_start();
+    if(session_status() === PHP_SESSION_NONE) session_start();
     // to avoid unauthorized access - check for profession
     if($_SESSION["profession"]=="student"){
         $_SESSION["error"]="Unauthorized Access";
@@ -67,8 +67,8 @@
         <!-- <a class="item" href="announcements.php">
             <i class="bullhorn icon"></i> Post Announcement
         </a> -->
-        <a class="item">
-            <i class="users icon"></i> Staff Room
+        <a class="item" href="chat_groups.php">
+            <i class="users icon"></i> Staff Rooms
         </a>
         <a class="item" href="view_profile.php">
             <i class="user circle icon"></i> My Profile
