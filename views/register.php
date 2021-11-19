@@ -18,6 +18,13 @@ include_once 'partials/header.php';
 ?>
 
 <div id class="ui raised very padded text container segment ">
+    <?php
+    // if the session on include error msg
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    include_once 'error.php';
+    ?>
     <form class="ui form" action="../includes/process_register.php" method="post">
         <div class="field">
             <label>Profession</label>

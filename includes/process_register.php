@@ -19,12 +19,13 @@ $result1 = mysqli_query($conn, $query1);
 echo $profession;
 
 if (!$result1) {
-    echo ("Can't Register,The user email already exist !!");
+    $_SESSION['error'] = "Can't Register. The user email already exist !!";
+    header('location: ../views/register.php');
 } else {
     $_SESSION['id'] = mysqli_insert_id($conn);
     $_SESSION['name'] = $full_name;
-    $_SESSION["error"]='0';
-    $_SESSION["profession"]=$profession;
+    $_SESSION['error']='0';
+    $_SESSION['profession']=$profession;
     
     echo "Information successfully added to DB";
     if ($profession == "teacher") {
