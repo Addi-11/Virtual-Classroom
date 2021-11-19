@@ -59,11 +59,14 @@
         <a class="item" href="time_table.php">
             <i class="table icon"></i> My Timetable
         </a>
-        <a class="item" href="announcements.php">
+        <!-- <a class="item" href="announcements.php">
             <i class="bullhorn icon"></i> Post Announcement
-        </a>
+        </a> -->
         <a class="item">
             <i class="users icon"></i> Staff Room
+        </a>
+        <a class="item" href="view_profile.php">
+            <i class="user circle icon"></i> My Profile
         </a>
         <div class="bottom-aligned">
             <a class="item" href="../logout.php">

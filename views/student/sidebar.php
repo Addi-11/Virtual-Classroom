@@ -59,6 +59,9 @@
         <a class="item">
             <i class="discourse icon"></i> Discuss
         </a>
+        <a class="item" href="view_profile.php">
+            <i class="user circle icon"></i> My Profile
+        </a>
         <div class="bottom-aligned">
             <a class="item" href="../logout.php">
                 <i class="sign-out alternate icon"></i> Logout
