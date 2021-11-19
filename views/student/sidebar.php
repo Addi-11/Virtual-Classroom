@@ -20,7 +20,7 @@
     <?php
     session_start();
     // to avoid unauthorized access checking for profession
-    if ($_SESSION["profession"] == "student") {
+    if ($_SESSION["profession"] == "teacher") {
         $_SESSION["error"] = "Unauthorized Access";
         header('location: ../login.php');
     }
