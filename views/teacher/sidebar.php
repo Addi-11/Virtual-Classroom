@@ -56,7 +56,7 @@
     <!-- <div class="ui bottom attached segment pushable"> -->
     <div class="ui left fixed vertical inverted labeled icon menu flex-container">
         <a class="item" href="home.php">
-            <i class="home icon"></i> Dashboard
+            <i class="home icon"></i> Home
         </a>
         <a class="item" href="classes.php">
             <i class="block layout icon"></i> My Classes
