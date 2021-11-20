@@ -1,4 +1,6 @@
-<?php include_once '../../includes/config.php'?>
+<?php include_once '../../includes/config.php';
+// echo isset($_GET['group_id']);
+?>
 <div class="ui grid">
     <!-- All groups displayed in this div -->
     <div class="four wide column">
@@ -11,27 +13,51 @@
             </div>
             <br>
             <div class="ui buttons">
-                <button class="ui button">Create Group</button>
+                <button class="ui button" name="create_group" onclick="CreateGroupForm()">Create Group</button>
                 <div class="or"></div>
-                <button class="ui olive button">Join Group</button>
+                <button class="ui olive button" name="join_group" onclick="JoinGroupForm()">Join Group</button>
+
+            </div>
+            <br>
+            <br>
+
+            <?php include_once '../error.php' ?>
+            <div id="create_group_form" style="display:none">
+                <form action="../../includes/process_create_chat_groups.php" method="post">
+                    <div class="ui fluid input">
+                        <input type="text" placeholder="Create Group" name="group_name">
+                    </div>
+                </form>
+            </div>
+            <div id="join_group_form" style="display:none">
+                <form action="../../includes/process_join_chat_group.php" method="post">
+                    <div class="ui fluid input">
+                        <input type="text" placeholder="Join Group" name="group_id">
+                    </div>
+                </form>
             </div>
             <div class="ui divider"></div>
             <?php
-                $user_id=$_SESSION['id'];
-                $query=mysqli_query($conn,"Select group_name from groups where group_id in (Select group_id from group_users where user_id='$user_id')");
-                $group_names=mysqli_fetch_all($query,MYSQLI_ASSOC);
+            // obtain all the chat groups for given user
+            $user_id = $_SESSION['id'];
+            $query = mysqli_query($conn, "Select * from groups where group_id in (Select group_id from group_users where user_id='$user_id') order by latest_msg_time desc");
+            $groups = mysqli_fetch_all($query, MYSQLI_ASSOC);
             ?>
             <div class="ui middle aligned list">
-                <?php foreach ($group_names as $group_name) { 
+                <?php foreach ($groups as $group) {
                 ?>
-                    <div class="item">
-                        <img class="ui avatar image" src="../../images/student.jpg">
-                        &ensp;
-                        <span style="font-size:18px">
-                            <?=implode(" ", $group_name) ?>
-                        </span>
-                    </div>
-                <?php } 
+                    <a href="../chat_groups.php?group_id=<?= $group['group_id'] ?>">
+                        <div class="item">
+                            <img class="ui avatar image" src="../../images/student.jpg">
+                            &ensp;
+                            <span style="font-size:18px">
+                                <?= $group['group_name'] ?>
+                            </span>
+                        </div>
+                    </a>
+                    <div class="ui divider"></div>
+                    <br>
+                <?php }
                 ?>
             </div>
         </div>
@@ -46,3 +72,5 @@
         </div>
     </div>
 </div>
+
+<script src="../../js/group.js"></script>
