@@ -15,7 +15,7 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div class="ui huge header">
                     <p id="quotes"></p>
                     <div class="ui sub header">
-                        <span id="author"></span>
+                        <i><span id="author"></span></i>
                     </div>
                 </div>
             </div>
@@ -24,18 +24,29 @@ $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     Today's Schedule
                 </div>
                 <div class="ui divider"></div>
-                <div class="ui grid">
-                    <?php foreach ($results as $result) { ?>
-                        <div class="three wide column">
-                            &ensp;
-                            <i class="circle outline icon"></i>
-                            <?= $result['start_time'] ?> - <?= $result['end_time'] ?>
+                <?php if (!empty($results)) { ?>
+                    <div class="ui piled placeholder segment">
+                        <div class="ui grid">
+                            <?php foreach ($results as $result) { ?>
+                                <div class="three wide column">
+                                    &ensp;
+                                    <i class="circle outline icon"></i>
+                                    <?= $result['start_time'] ?> - <?= $result['end_time'] ?>
+                                </div>
+                                <div class="thirteen wide column">
+                                    <?= $result['task'] ?>
+                                </div>
+                            <?php } ?>
                         </div>
-                        <div class="thirteen wide column">
-                            <?= $result['task'] ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="ui placeholder segment">
+                        <div class="ui icon header">
+                            <i class="smile outline icon"></i>
+                            Yay !!! No schedule Today....
                         </div>
-                    <?php } ?>
-                </div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <div class="four wide column">
