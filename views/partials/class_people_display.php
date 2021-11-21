@@ -5,14 +5,8 @@ $student_query = mysqli_query($conn, "select * from users where id in (select us
 $student_result = mysqli_fetch_all($student_query, MYSQLI_ASSOC);
 
 // get all teachers for given class
-$teacher_query = mysqli_query($conn, "select name from users where id in (select user_id from classrooms where classroom_code='$class_code')");
+$teacher_query = mysqli_query($conn, "select * from users where id in (select user_id from classrooms where classroom_code='$class_code')");
 $teacher_result = mysqli_fetch_all($teacher_query, MYSQLI_ASSOC);
-$image_url="../../images/".$_SESSION['profession'].".png";
-
-if(isset($_SESSION['image_extension'])){
-    $image_url="../../images/users/".$_SESSION['id'] . ".".$_SESSION['image_extension'];
-}
-
 ?>
 
 <div class="ui bottom attached segment">
@@ -27,7 +21,14 @@ if(isset($_SESSION['image_extension'])){
                     </div>
                 </div>
                 <div class="ui middle aligned list">
-                    <?php foreach ($teacher_result as $teacher) { ?>
+                    <?php foreach ($teacher_result as $teacher) { 
+                        // profile images
+                        $image_url="../../images/teacher.png";
+
+                        if($teacher['image_extension']!='' || $teacher['image_extension']!=NULL){
+                            $image_url="../../images/users/".$teacher['id'] . ".".$_SESSION['image_extension'];
+                        }
+                        ?>
                         <div class="item">
                             <img class="ui avatar image" src="<?=$image_url?>">
                             &ensp;
@@ -48,6 +49,12 @@ if(isset($_SESSION['image_extension'])){
                 </div>
                 <div class="ui middle aligned list">
                     <?php foreach ($student_result as $student) {
+                        // profile image adding
+                        $image_url="../../images/student.png";
+
+                        if($student['image_extension']!=NULL || $student['image_extension']!=''){
+                            $image_url="../../images/users/".$student['id'] . ".".$_SESSION['image_extension'];
+                        }
                         $color = "";
                         // vaccine status color setting
                         if ($student['vaccine_stat'] == 'not-vaccine') {
