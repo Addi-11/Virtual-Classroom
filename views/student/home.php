@@ -1,21 +1,4 @@
-<?php
-include_once 'sidebar.php';
+<?php 
+    include_once 'sidebar.php';
+    include_once '../partials/home_display.php';
 ?>
-<div class="left-container">
-
-    <div class="ui grid">
-        <div class="olive twelve wide column"></div>
-        <div class="four wide column">      
-            <div class="" id="calendar"></div>
-        </div>
-    </div>
-
-</div>
-
-
-</body>
-
-<script src="../../js/calender.js"></script>
-<script src="../../js/sidebar.js" type="text/javascript"></script>
-
-</html>
