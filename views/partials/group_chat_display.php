@@ -28,7 +28,7 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <img class="ui avatar image" src="../../images/group.jpg">
             <?= $group_name['group_name'] ?>
             <?= $group_id ?>
-            
+
         </div>
         <br>
     </div>
@@ -41,48 +41,49 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
             if ($val['image_extension'] != NULL || $val['image_extension'] != '') {
                 $image_url = "../../images/users/" . $val['id'] . "." . $val['image_extension'];
             }
-            if ($val['user_id'] == $_SESSION['id']) { ?>
-                <!-- if its my message make it shift to right -->
-                <div style="margin-left:80%;">
-                    <div class="comment">
-                        <a class="avatar">
-                            <img src="<?= $image_url ?>">
-                        </a>
-                        <div class="content">
-                            <a class="author"><?= $val['name'] ?></a>
-                            <!-- <div class="metadata">
-                                    <span class="date">
-                                        <?php
-                                        // $interval = date_create($val['date_time']);
-                                        // echo $interval->format("%hh %im %ss");
-                                        // echo $val['date_time'];
-                                        ?>
-                                    </span>
-                                </div> -->
-                            <div class="text"><?= $val['message'] ?></div>
-                        </div>
-                    </div>
-                </div>
-            <?php } else { ?>
-                <!-- shift message to left  -->
+            if ($val['user_id'] == $_SESSION['id']) { 
+        ?>
+            <!-- if its my message make it shift to right -->
+            <div style="margin-left:80%;">
                 <div class="comment">
                     <a class="avatar">
-                        <img src="<?=$image_url?>">
+                        <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
                     </a>
-                    <div class="content">
+                    <div class=" content">
                         <a class="author"><?= $val['name'] ?></a>
-                        <div class="metadata">
-                            <span class="date">
-                                <?php
-                                // $interval = date_create($val['date_time']);
-                                // echo $interval->format("%hh %im %ss");
-                                // echo $val['date_time'];
-                                ?>
-                            </span>
-                        </div>
+                        <!-- <div class="metadata">
+                                <span class="date">
+                                    <?php
+                                    // $interval = date_create($val['date_time']);
+                                    // echo $interval->format("%hh %im %ss");
+                                    // echo $val['date_time'];
+                                    ?>
+                                </span>
+                            </div> -->
                         <div class="text"><?= $val['message'] ?></div>
                     </div>
                 </div>
+            </div>
+        <?php } else { ?>
+            <!-- shift message to left  -->
+            <div class="comment">
+                <a class="avatar">
+                    <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
+                </a>
+                <div class=" content">
+                    <a class="author"><?= $val['name'] ?></a>
+                    <div class="metadata">
+                        <span class="date">
+                            <?php
+                            // $interval = date_create($val['date_time']);
+                            // echo $interval->format("%hh %im %ss");
+                            // echo $val['date_time'];
+                            ?>
+                        </span>
+                    </div>
+                    <div class="text"><?= $val['message'] ?></div>
+                </div>
+            </div>
         <?php }
         } ?>
     </div>

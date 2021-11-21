@@ -65,8 +65,8 @@
         <a class="item" href="time_table.php">
             <i class="table icon"></i> My Timetable
         </a>
-        <a class="item">
-            <i class="discourse icon"></i> Discuss
+        <a class="item" href="chat_groups.php">
+            <i class="discourse icon"></i> Discussion Groups
         </a>
         <a class="item" href="view_profile.php">
             <i class="user circle icon"></i> My Profile
