@@ -25,11 +25,15 @@
         $_SESSION["error"]="Unauthorized Access";
         header('location: ../login.php');
     }
+    $image_url="../../images/teacher.png";
+    if(isset($_SESSION['image_extension'])){
+        $image_url="../../images/users/".$_SESSION['id'] . ".".$_SESSION['image_extension'];
+    }
     ?>
     <div class="ui top borderless attached demo menu">
 
         <div class="ui header item" style="margin-left:180px;">
-            <img class="ui circular image" src="../../images/teacher.png">
+            <img class="ui circular image" src="<?=$image_url?>">
             Welcome Back <?= $_SESSION['name']; ?>!!!
         </div>
 
