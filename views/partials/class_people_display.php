@@ -26,7 +26,7 @@ $teacher_result = mysqli_fetch_all($teacher_query, MYSQLI_ASSOC);
                         $image_url="../../images/teacher.png";
 
                         if($teacher['image_extension']!='' || $teacher['image_extension']!=NULL){
-                            $image_url="../../images/users/".$teacher['id'] . ".".$_SESSION['image_extension'];
+                            $image_url="../../images/users/".$teacher['id'] . ".".$teacher['image_extension'];
                         }
                         ?>
                         <div class="item">
@@ -53,7 +53,7 @@ $teacher_result = mysqli_fetch_all($teacher_query, MYSQLI_ASSOC);
                         $image_url="../../images/student.png";
 
                         if($student['image_extension']!=NULL || $student['image_extension']!=''){
-                            $image_url="../../images/users/".$student['id'] . ".".$_SESSION['image_extension'];
+                            $image_url="../../images/users/".$student['id'] . ".".$student['image_extension'];
                         }
                         $color = "";
                         // vaccine status color setting
