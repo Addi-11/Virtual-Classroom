@@ -2,8 +2,8 @@
 include_once 'sidebar.php';
 ?>
 <div class="left-container">
-    lets enter the Teacher time table here
-</div>
+    <div class="ui header">Weekly Time Table</div>
+    <?php include_once '../partials/time_table_display.php'; ?>
 </div>
 
 
