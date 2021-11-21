@@ -1,56 +1,46 @@
+<?php
+include_once '../../includes/config.php';
+$user_id = $_SESSION['id'];
+$query = mysqli_query($conn, "Select * from users where id='$user_id'");
+$result = mysqli_fetch_array($query, MYSQLI_ASSOC);
+$image_url = "../../images/student.jpg";
+    if (isset($_SESSION['image_extension'])) {
+        $image_url = "../../images/users/" . $_SESSION['id'] . "." . $_SESSION['image_extension'];
+    }
+?>
 <div id class="ui raised very padded text container segment ">
+    <img class="ui small centered circular image" src="<?=$image_url?>">
 
-    <form action="../../includes/process_edit_profile.php" method="post" enctype="multipart/form-data">
+    <form class="ui form" action="edit_profile.php" method="post">
 
-        <img class="ui small centered circular image" src="../../images/teacher.png">
-
-        <input id="file-input" name="image_file" type="file" />
-
-
-        <button type="submit">B</button>
-    </form>
-    <form class="ui form" action="" method="post">
-        <div class="field">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="Ram" required>
+        <label>Full Name</label>
+        <div class="disabled field">
+            <input type="text" name="name" value="<?= $result['name'] ?>">
         </div>
-        <div class="field">
-            <label>Mail ID</label>
-            <input type="email" name="mail-id" placeholder="Mail ID" required>
+        <label>Mail ID</label>
+        <div class="disabled field">
+            <input type="email" name="mail-id" value="<?= $result['email'] ?>">
         </div>
-        <div class="field">
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Password" required>
+        <label>Phone Number</label>
+        <div class="disabled field">
+            <input type="text" name="phone-number" value="<?= $result['phone_number'] ?>">
         </div>
-        <div class="field">
-            <label>Phone Number</label>
-            <input type="text" name="phone-number" placeholder="Phone number">
-        </div>
-        <div class="field">
-            <label>Gender</label>
+        <label>Gender</label>
+        <div class="disabled field">
             <div class="ui dropdown selection">
-                <input type="hidden" name="gender" required>
-                <div class="default text">Select Gender</div>
+                <input type="hidden" name="gender">
+                <div class="default text"><?= $result['gender'] ?></div>
                 <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="item" data-value="male">Male</div>
-                    <div class="item" data-value="female">Female</div>
-                </div>
             </div>
         </div>
-        <div class="field">
-            <label>Vaccination Status</label>
+        <label>Vaccination Status</label>
+        <div class="disabled field">
             <div class="ui dropdown selection">
                 <input type="hidden" name="vaccination-status" required>
-                <div class="default text">COVID-19 Vaccination Status</div>
+                <div class="default text"><?= $result['vaccine_stat'] ?></div>
                 <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="item" data-value="full-vaccine">Fully Vaccinated</div>
-                    <div class="item" data-value="partial-vaccine">Partially Vaccinated</div>
-                    <div class="item" data-value="not-vaccine">Not Vaccinated</div>
-                </div>
             </div>
         </div>
-        <button class="ui button" type="submit" name="edit_profile_button">Save</button>
+        <button class="ui button" type="submit" name="edit_profile_button">Edit</button>
     </form>
 </div>
