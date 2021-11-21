@@ -3,7 +3,7 @@ include_once '../../includes/config.php';
 $user_id = $_SESSION['id'];
 $query = mysqli_query($conn, "Select * from users where id='$user_id'");
 $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
-$image_url = "../../images/student.jpg";
+$image_url = "../../images/student.png";
 if (isset($_SESSION['image_extension'])) {
     $image_url = "../../images/users/" . $_SESSION['id'] . "." . $_SESSION['image_extension'];
 }

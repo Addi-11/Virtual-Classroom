@@ -11,6 +11,7 @@ $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 session_start();
 if (($result > 0 && password_verify($_POST['login-password'],$result['password']))) {
     $profession = $result['profession'];
+    $_SESSION['image_extension']=$result['image_extension'];
     if ($profession == "teacher") {
         $_SESSION["error"]='0';
         $_SESSION["id"] = $result['id'];

@@ -10,6 +10,9 @@ $targetfolder = "../images/users/";
 $targetfolder = $targetfolder . $user_id;
 $targetfolder=$targetfolder.".".$image_extension;
 echo $targetfolder;
+$sql=mysqli_query($conn,"Select * from users where id='$user_id'");
+$res=mysqli_fetch_array($sql,MYSQLI_ASSOC);
+$img_path="../images/users/".$user_id.".".$res['image_extension'];
 
 $url= '../views/'.$_SESSION['profession'].'/view_profile.php';
 // .jpg , .jpeg , .jfif , .pjpeg , .pjp
@@ -19,6 +22,8 @@ if($image_extension == "jpg" || $image_extension == "png" || $image_extension ==
     if(move_uploaded_file($_FILES['image_file']['tmp_name'], $targetfolder))
     {
         // echo "The file ". basename( $_FILES['file_name']['name']). " is uploaded";
+        unlink($img_path);
+        echo $img_path;
         $query="Update users set image_extension='$image_extension' where id='$user_id'";
         if(mysqli_query($conn,$query)){
             $_SESSION['image_extension']=$image_extension;
@@ -38,4 +43,3 @@ if($image_extension == "jpg" || $image_extension == "png" || $image_extension ==
     $_SESSION['error']="File type not supported.";
     header('location: '.$url);
 }
-?>
