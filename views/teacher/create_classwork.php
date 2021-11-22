@@ -10,6 +10,7 @@ $class_code = $_GET["class_code"];
             Back
         </a>
     </div>
+    <?php include_once '../error.php' ?>
     <form class="ui form" method="post" action="../../includes/process_create_classwork.php?class_code=<?php echo $class_code; ?>" enctype="multipart/form-data">
         <div class="fields">
             <div class="ten wide field">
@@ -59,7 +60,7 @@ $class_code = $_GET["class_code"];
             <div class="ten wide field">
                 <div class="image-upload">
                     <i classs="upload icon"></i>
-                    <input id="file-input" stylde="color:red;"name="file_name" type="file" />
+                    <input id="file-input" stylde="color:red;" name="file_name" type="file" />
                 </div>
             </div>
         </div>

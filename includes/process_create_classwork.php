@@ -25,8 +25,9 @@ $url_create_classwork = '../views/teacher/create_classwork.php?class_code='.$cla
 
 // checking for empty uploads
 if($classwork_title==NULL){
-    echo '<script>alert("Empty classwork not allowed.")</script>';
-    // header('location: '.$url_create_classwork);
+    // echo '<script>alert("Empty classwork not allowed.")</script>';
+    $_SESSION['error'] = "Classwork empty!!";
+    header('location: '.$url_create_classwork);
 }else{
     // if file is uploaded - move to folder
     if(move_uploaded_file($_FILES['file_name']['tmp_name'], $targetfolder))
