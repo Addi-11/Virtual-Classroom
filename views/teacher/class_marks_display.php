@@ -52,7 +52,7 @@ $students = mysqli_fetch_all($student_query, MYSQLI_ASSOC);
                 <?php }?>
                 <td>
                     <?php 
-                        $percent=($student_total_marks*100)/$total_marks;
+                        $percent=($student_total_marks*100)/max($total_marks, 1);
                         $percent=number_format($percent, 2);
                         echo $percent." %";
                     ?>
