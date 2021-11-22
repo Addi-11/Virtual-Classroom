@@ -24,7 +24,7 @@
         $_SESSION["error"] = "Unauthorized Access";
         header('location: ../login.php');
     }
-    $image_url = "../../images/student.jpg";
+    $image_url = "../../images/student.png";
     if (isset($_SESSION['image_extension'])) {
         $image_url = "../../images/users/" . $_SESSION['id'] . "." . $_SESSION['image_extension'];
     }
