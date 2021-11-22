@@ -17,9 +17,17 @@
         <div class="item">
             <img src="../images/octocat.png">
         </div>
-        <a class="item">
-        <div class="ui large header">Octocat Classes</div>
+        <a class="item" href="../index.php">
+            <div class="ui large header">Octocat Classes</div>
         </a>
+        <div class="right menu">
+            <a class="item" href="login.php">
+                <div class="ui header">Login</div>
+            </a>
+            <a class="item" href="register.php">
+                <div class="ui header">Register</div>
+            </a>
+        </div>
     </div>
 
     <br><br><br><br>
