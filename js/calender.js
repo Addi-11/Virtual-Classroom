@@ -5,12 +5,12 @@ $('#calendar').calendar({
     eventDates: [{
 
             date: new Date(),
-            message: 'Show me in light purple',
-            class: 'inverted purple'
+            message: 'Today',
+            class: 'teal'
         },
         {
-            date: new Date('2021-11-22'),
-            message: 'Show me in green',
+            date: new Date('2021-11-21'),
+            message: 'School Festival',
             class: 'green'
         }
     ]

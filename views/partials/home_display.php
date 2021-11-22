@@ -8,15 +8,20 @@ $query = mysqli_query($conn, "Select task, DATE_FORMAT(start_time, '%H:%i') AS s
 $results = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
 <div class="left-container">
     <div class="ui grid">
         <div class="twelve wide column">
-            <div class="ui segment">
-                <div class="ui huge header">
+            <div class="ui raised padded teal piled segment">
+                <div class="ui huge teal header" style="font-family: 'Montserrat', sans-serif;">
                     <p id="quotes"></p>
-                    <div class="ui sub header">
+                    <div class="ui right floated sub header">
                         <i><span id="author"></span></i>
                     </div>
+                    <br>
                 </div>
             </div>
             <div class="ui segment">
