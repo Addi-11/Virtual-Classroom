@@ -34,7 +34,7 @@ if (isset($_POST['submit_marks'])) {
                 Back
             </a>
         </div>
-        <div class="ui ten wide column">
+        <div class="ui eight wide column">
             <h1 class="ui huge header">
                 <i class="book icon"></i>
                 <div class="content">
@@ -43,7 +43,7 @@ if (isset($_POST['submit_marks'])) {
             </h1>
             <div class="content">
                 <div class="ui right aligned tiny grey header">
-                    Due Date : <?= $result['due_date'] ?>
+                    Due Date : <?= date_format(date_create($result['due_date']), "Y/m/d") ?>
                 </div>
             </div>
             <div class="ui divider"></div>
@@ -65,7 +65,7 @@ if (isset($_POST['submit_marks'])) {
                 <?php } ?>
             </div>
         </div>
-        <div class="six wide column">
+        <div class="eight wide column">
             <div class="ui segment">
                 <div class="sixteen wide column">
                     <div class="ui large header">
