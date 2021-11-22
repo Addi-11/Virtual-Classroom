@@ -1,0 +1,14 @@
+.heading-container {
+    margin: 50px;
+}
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5vw;
+}
+
+.section-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-content: center;
+}
