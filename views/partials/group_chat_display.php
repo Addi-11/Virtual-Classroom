@@ -25,7 +25,7 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <div class="ui segment">
     <div class="ui top attached menu">
         <div class="ui huge header">
-            <img class="ui avatar image" src="../../images/group.jpg">
+            <img class="ui avatar image" src="../../images/house.png">
             <?= $group_name['group_name'] ?>
             <?= $group_id ?>
 

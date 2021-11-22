@@ -47,7 +47,7 @@
                 ?>
                     <a href="chat_groups.php?group_id=<?= $group['group_id'] ?>">
                         <div class="item">
-                            <img class="ui avatar image" src="../../images/student.jpg">
+                            <img class="ui avatar image" src="../../images/house.png">
                             &ensp;
                             <span style="font-size:18px">
                                 <?= $group['group_name'] ?>
