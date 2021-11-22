@@ -3,12 +3,15 @@ $table_name = 'student_submission';
 $classwork_id = $file_id;
 
 // get all students who submitted for given classroom
-$query = mysqli_query($conn, "select users.name, student_submission.submission_file_id, student_submission.submission_file_extension, student_submission.submission_date from users, student_submission where (users.id=student_submission.user_id and classwork_id='$classwork_id')");
+$query = mysqli_query($conn, "select users.id,users.name, users.image_extension,student_submission.submission_file_id, student_submission.submission_file_extension, student_submission.submission_date from users, student_submission where (users.id=student_submission.user_id and classwork_id='$classwork_id')");
 $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 $msg = "";
-
-
 foreach ($result as $student) {
+    $image_url = "../../images/student.png";
+
+    if ($student['image_extension'] != '' || $student['image_extension'] != NULL) {
+        $image_url = "../../images/users/" . $student['id'] . "." . $student['image_extension'];
+    }
 ?>
     <div class="ui grid">
         <div class="row">
@@ -17,7 +20,7 @@ foreach ($result as $student) {
                     <div class="ui grid">
                         <div class="ten wide column">
                             <div class="item">
-                                <img class="ui avatar image" src="../../images/student.png">
+                                <img class="ui avatar image" src="<?=$image_url?>">
                                 <span style="text-transform:uppercase;"><?= $student['name'] ?></span>
                             </div>
                         </div>
