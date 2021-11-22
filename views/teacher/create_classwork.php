@@ -39,7 +39,7 @@ $class_code = $_GET["class_code"];
             </div>
             <div class="three wide field">
                 <label>Due Date</label>
-                <input type="text" name="classwork_due_date" placeholder="YYYY-MM-DD">
+                <input type="date" name="classwork_due_date" placeholder="YYYY-MM-DD">
             </div>
             <div class="one wide field">
                 <label>Points</label>
