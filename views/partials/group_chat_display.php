@@ -1,21 +1,5 @@
 <?php
 $group_id = $_GET['group_id'];
-
-// if (isset($_POST['post_message'])) {
-//     $user_id = $_SESSION['id'];
-//     $message = $_POST['group_message'];
-//     date_default_timezone_set('Asia/Kolkata');
-//     $date_time = date('Y-m-d H:i:s');
-//     $query = "Insert into group_chats (user_id,group_id,date_time,message) Values ('$user_id','$group_id','$date_time','$message')";
-//     $result = mysqli_query($conn, $query);
-//     if ($result) {
-//         $query = "Update groups set latest_msg_time='$date_time' where group_id='$group_id'";
-//         $res = mysqli_query($conn, $query);
-//         header('location: chat_groups?group_id='.$group_id);
-//         // header("Refresh:0");
-//         // exit;
-//     }
-// }
 $query = mysqli_query($conn, "Select group_name from groups where group_id='$group_id'");
 $group_name = mysqli_fetch_array($query, MYSQLI_ASSOC);
 $query = mysqli_query($conn, "Select group_chats.*, users.* from group_chats , users where (group_chats.group_id='$group_id' and users.id=group_chats.user_id )order by group_chats.date_time");
@@ -23,12 +7,20 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
 <div class="ui segment">
-    <div class="ui top attached menu">
-        <div class="ui huge header">
-            <img class="ui avatar image" src="../../images/house.png">
-            <?= $group_name['group_name'] ?>
-            <?= $group_id ?>
-
+    <div class="ui top attached secondary menu">
+        <div class="item">
+            <div class="ui huge header">
+                <img class="ui avatar image" src="../../images/house.png">
+                <?= $group_name['group_name'] ?>
+            </div>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui tiny header">
+                    <?= $group_id ?>
+                    <i class="copy icon"></i>
+                </div>
+            </div>
         </div>
         <br>
     </div>
@@ -41,17 +33,17 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
             if ($val['image_extension'] != NULL || $val['image_extension'] != '') {
                 $image_url = "../../images/users/" . $val['id'] . "." . $val['image_extension'];
             }
-            if ($val['user_id'] == $_SESSION['id']) { 
+            if ($val['user_id'] == $_SESSION['id']) {
         ?>
-            <!-- if its my message make it shift to right -->
-            <div style="margin-left:80%;">
-                <div class="comment">
-                    <a class="avatar">
-                        <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
-                    </a>
-                    <div class=" content">
-                        <a class="author"><?= $val['name'] ?></a>
-                        <!-- <div class="metadata">
+                <!-- if its my message make it shift to right -->
+                <div style="margin-left:80%;">
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
+                        </a>
+                        <div class=" content">
+                            <a class="author"><?= $val['name'] ?></a>
+                            <!-- <div class="metadata">
                                 <span class="date">
                                     <?php
                                     // $interval = date_create($val['date_time']);
@@ -60,30 +52,30 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
                                     ?>
                                 </span>
                             </div> -->
+                            <div class="text"><?= $val['message'] ?></div>
+                        </div>
+                    </div>
+                </div>
+            <?php } else { ?>
+                <!-- shift message to left  -->
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
+                    </a>
+                    <div class=" content">
+                        <a class="author"><?= $val['name'] ?></a>
+                        <div class="metadata">
+                            <span class="date">
+                                <?php
+                                // $interval = date_create($val['date_time']);
+                                // echo $interval->format("%hh %im %ss");
+                                // echo $val['date_time'];
+                                ?>
+                            </span>
+                        </div>
                         <div class="text"><?= $val['message'] ?></div>
                     </div>
                 </div>
-            </div>
-        <?php } else { ?>
-            <!-- shift message to left  -->
-            <div class="comment">
-                <a class="avatar">
-                    <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
-                </a>
-                <div class=" content">
-                    <a class="author"><?= $val['name'] ?></a>
-                    <div class="metadata">
-                        <span class="date">
-                            <?php
-                            // $interval = date_create($val['date_time']);
-                            // echo $interval->format("%hh %im %ss");
-                            // echo $val['date_time'];
-                            ?>
-                        </span>
-                    </div>
-                    <div class="text"><?= $val['message'] ?></div>
-                </div>
-            </div>
         <?php }
         } ?>
     </div>
