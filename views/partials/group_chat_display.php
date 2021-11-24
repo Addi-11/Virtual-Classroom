@@ -36,22 +36,13 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
             if ($val['user_id'] == $_SESSION['id']) {
         ?>
                 <!-- if its my message make it shift to right -->
-                <div style="margin-left:80%;">
+                <div>
                     <div class="comment">
                         <a class="avatar">
                             <img src="<?= $image_url ?>" style="max-width: 35px; max-height: 35px;">
                         </a>
                         <div class=" content">
                             <a class="author"><?= $val['name'] ?></a>
-                            <!-- <div class="metadata">
-                                <span class="date">
-                                    <?php
-                                    // $interval = date_create($val['date_time']);
-                                    // echo $interval->format("%hh %im %ss");
-                                    // echo $val['date_time'];
-                                    ?>
-                                </span>
-                            </div> -->
                             <div class="text"><?= $val['message'] ?></div>
                         </div>
                     </div>
@@ -64,15 +55,6 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     </a>
                     <div class=" content">
                         <a class="author"><?= $val['name'] ?></a>
-                        <div class="metadata">
-                            <span class="date">
-                                <?php
-                                // $interval = date_create($val['date_time']);
-                                // echo $interval->format("%hh %im %ss");
-                                // echo $val['date_time'];
-                                ?>
-                            </span>
-                        </div>
                         <div class="text"><?= $val['message'] ?></div>
                     </div>
                 </div>
