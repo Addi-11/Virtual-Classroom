@@ -18,11 +18,11 @@ $url= '../views/'.$_SESSION['profession'].'/view_profile.php';
 // .jpg , .jpeg , .jfif , .pjpeg , .pjp
 if($image_extension == "jpg" || $image_extension == "png" || $image_extension == "jpeg"
 || $image_extension == "gif"  || $image_extension == "jfif" || $image_extension == "pjp"){
-
+unlink($img_path);
     if(move_uploaded_file($_FILES['image_file']['tmp_name'], $targetfolder))
     {
         // echo "The file ". basename( $_FILES['file_name']['name']). " is uploaded";
-        unlink($img_path);
+        
         echo $img_path;
         $query="Update users set image_extension='$image_extension' where id='$user_id'";
         if(mysqli_query($conn,$query)){

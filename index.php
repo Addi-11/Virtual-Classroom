@@ -209,7 +209,7 @@
                     <div class="ui small star rating"></div>
                 </div>
             </div>
-            <div class="ui divider"></div>
+            <!-- <div class="ui divider"></div>
             <div class="row">
                 <div class="four wide column">
                     <img class="ui tiny circular centered image" src="images/student.png">
@@ -223,7 +223,7 @@
                     </div>
                     <div class="ui small star rating"></div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <br><br>

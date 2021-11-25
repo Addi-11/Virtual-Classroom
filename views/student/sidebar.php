@@ -25,7 +25,7 @@
         header('location: ../login.php');
     }
     $image_url = "../../images/student.png";
-    if (isset($_SESSION['image_extension'])) {
+    if (isset($_SESSION['image_extension']) && $_SESSION['image_extension']!='') {
         $image_url = "../../images/users/" . $_SESSION['id'] . "." . $_SESSION['image_extension'];
     }
     ?>
@@ -33,7 +33,7 @@
     <div class="ui top borderless attached demo menu">
         <div class="ui header item" style="margin-left:180px;">
             <img class="ui circular image" src="<?= $image_url ?>">
-            Welcome Back <?= $_SESSION['name']; ?>!!!
+            Welcome Back <?=$_SESSION['name'];?>
         </div>
 
         <div class="right menu">
