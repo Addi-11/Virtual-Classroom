@@ -34,7 +34,7 @@
 
         <div class="ui header item" style="margin-left:180px;">
             <img class="ui circular image" src="<?=$image_url?>">
-            Welcome Back <?= $_SESSION['name']; ?>!!!
+            Welcome Back <?= $_SESSION['name']; ?>!
         </div>
 
         <div class="right menu">
