@@ -1,0 +1,53 @@
+ #mymessagecontainer {
+     width: fit-content;
+     padding: 1em;
+     background: lightblue;
+     border-radius: 1em;
+     align-self: flex-end;
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: flex-end;
+ }
+ 
+ #othermessagecontainer {
+     width: fit-content;
+     padding: 1em;
+     border-radius: 1em;
+     background: #eee;
+ }
+ 
+ .ui.comments {
+     max-width: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .comment {
+     max-width: 50%;
+     display: flex;
+     justify-content: flex-start;
+ }
+ 
+ #author-msg,
+ #other-msg {
+     margin: 0 1em;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .ui.comments .comment .avatar {
+     min-width: 2.5em;
+     height: 2.5em;
+     margin: 0;
+ }
+ 
+ #author-msg>.author {
+     align-self: flex-end;
+ }
+ 
+ #groupChat {
+     width: 100%;
+     height: 60vh;
+     overflow-y: scroll;
+     position: relative;
+ }
