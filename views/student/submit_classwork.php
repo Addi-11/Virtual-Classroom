@@ -95,7 +95,7 @@
                     <form action="" method="post">
                         <div class="ui fluid icon input">
 
-                            <img class="ui avatar image" src="../../images/student.jpg">
+                            <img class="ui avatar image" src="../../images/student.png">
                             <input type="text" name="comment" placeholder="Add Private a comment.">
                             <button class="ui icon button">
                                 <i class="paper plane outline icon"></i>
