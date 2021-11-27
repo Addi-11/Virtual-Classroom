@@ -1,4 +1,6 @@
-# Virtual-Classroom
+# Octocat Classes
+An online classroom web-application, making learning easy and reachable to all. 
+both schools, universities and private tutors can make use of the web-application.
 
 ## Getting Started
 
@@ -24,7 +26,7 @@ You need only [XAMPP](https://www.apachefriends.org/index.html) to run this proj
 
 ## Build With
 
-This is Web Development Project based on PHP. The Web Technology used are-
+This is Web Development Project based on PHP. The Web Technology used are : 
    * PHP
    * HTML
    * CSS
@@ -32,4 +34,18 @@ This is Web Development Project based on PHP. The Web Technology used are-
    * Semantic-UI
    * JQuery
    * MariaDB (or MySQL) (DataBase)
+
+## Features
+The project provides standardized features for an online classroom. Below are some of the key features : 
+* Clean and easy to navigate UI.
+* Complete & seperate Register, Login & Working Panel for students and teachers.
+* Quick and easy class creation and join using an auto-generated classcode.
+* Easy Assignment creation by teacher and submission by student.
+* An inbuild grading system for the teachers with an integrated percentage calculating system.
+* Personal weekly time-tables for teacher and student.
+* Interface to know the vaccination status of all the students in class.
+* Staff Room feature for teachers to exchange information on students, their school or locality.
+* Discussion Groups for students to discuss subjects or exchange notes.
+
+To know more details [click here.](docs/features.md)
     
