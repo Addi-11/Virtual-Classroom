@@ -1,32 +1,36 @@
 # Virtual-Classroom
 
-## Features:
-### Generic - 
-* Register as student or teacher.
-* Login.
-* Logout.
-* Calender display.
+## Getting Started
 
+This project is made entirely in "Localhost" using Apache or HTTP Server. Kindly follow the below mentioned instructions to run it on your machine.
 
-### Teacher - 
-* Create and display classrooms, with dynamic card generation.
-* Generating unique classroom codes, automatically.
-* Post class comments with time.
-* Display all students and teachers who joined a particular classroom.
-* Create classwork with due-dates, topic and marks. 
-* Upload assignment (any extension) material with classwork.
-* Display all posted assignments.
-* Display student submissions for a particular posted classwork.
-* Download (any extension) student submissions.
-* Grade each student submission in a given classwork.
-* Display all student with marks for all posted classworks collectively along with their percentage.
+### Pre-requisites
 
-### Student - 
-* Join classrooms using unique, valid classroom code.
-* Display all joined classroom cards dynamically.
-* Post class comments with time.
-* Display all students and teachers who joined a particular classroom.
-* Display all posted assignments for given classroom.
-* View and download classwork material uploaded by teacher.
-* Upload classwork-submission file (any extension) for each classwork.
+You need only [XAMPP](https://www.apachefriends.org/index.html) to run this project on your local machine.
+[XAMPP](https://www.apachefriends.org/index.html) is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl.
 
+### Setup
+
+* Git Clone the Repo or download the Project Zip file.
+
+* Extract the files in the htdocs directory where you installed [XAMPP](https://www.apachefriends.org/index.html).
+  Lets assume you installed [XAMPP](https://www.apachefriends.org/index.html) in C drive. Then your path to htdocs will be,
+  ```
+  C:/xampp/htdocs/
+  ```
+  
+* Start the Apache & MySQL(or MariaDB) module in XAMPP Control Panel.
+
+* Go to phpmyadmin from your browser & import the database which is provided as a SQL file in the Project zip under Database folder.
+
+## Build With
+
+This is Web Development Project based on PHP. The Web Technology used are-
+   * PHP
+   * HTML
+   * CSS
+   * JavaScript
+   * Semantic-UI
+   * JQuery
+   * MariaDB (or MySQL) (DataBase)
+    
