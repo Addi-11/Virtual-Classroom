@@ -23,7 +23,9 @@ $group_chats = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <div class="item">
             <div class="ui tiny header">
                 <?= $group_id ?>
-                <i class="copy icon"></i>
+                <button class="ui small basic icon button">
+                    <i class="teal copy icon"></i>
+                </button>
             </div>
         </div>
     </div>

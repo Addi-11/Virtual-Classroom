@@ -19,7 +19,9 @@
                         <div class="ui huge header ">
                             <?= $result["classroom_code"] ?>
                             <span class="right floated">
-                                <i class="copy icon"></i>
+                                <button class="ui basic icon button">
+                                    <i class="teal copy icon"></i>
+                                </button>
                             </span>
                         </div>
                     </div>
