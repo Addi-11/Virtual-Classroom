@@ -12,16 +12,15 @@ You need only [XAMPP](https://www.apachefriends.org/index.html) to run this proj
 ### Setup
 
 * Git Clone the Repo or download the Project Zip file.
-
 * Extract the files in the htdocs directory where you installed [XAMPP](https://www.apachefriends.org/index.html).
   Lets assume you installed [XAMPP](https://www.apachefriends.org/index.html) in C drive. Then your path to htdocs will be,
   ```
   C:/xampp/htdocs/
   ```
-  
-* Start the Apache & MySQL(or MariaDB) module in XAMPP Control Panel.
 
-* Go to phpmyadmin from your browser & import the database which is provided as a SQL file in the Project zip under Database folder.
+* Start the Apache & MySQL(or MariaDB) module in XAMPP Control Panel.
+* Go to phpmyadmin from your browser & import the database which is provided as a [SQL file](database/e_classrooms.sql) in the Project zip under Database folder.
+* Change the credentials in [config file](includes/config.php) to your username, server (usually localhost) and password.
 
 ## Build With
 
