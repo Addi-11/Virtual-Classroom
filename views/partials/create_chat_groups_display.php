@@ -23,15 +23,17 @@
             <?php include_once '../error.php'; ?>
             <div id="create_group_form" style="display:none">
                 <form action="../../includes/process_create_chat_groups.php" method="post">
-                    <div class="ui fluid input">
+                    <div class="ui fluid action input">
                         <input type="text" placeholder="Create Group" name="group_name">
+                        <button class="ui button">Create</button>
                     </div>
                 </form>
             </div>
             <div id="join_group_form" style="display:none">
                 <form action="../../includes/process_join_chat_group.php" method="post">
-                    <div class="ui fluid input">
+                    <div class="ui fluid action input">
                         <input type="text" placeholder="Join Group" name="group_id">
+                        <button class="ui button">Join</button>
                     </div>
                 </form>
             </div>
