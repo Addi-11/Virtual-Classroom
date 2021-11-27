@@ -11,10 +11,10 @@ The features available to teacher are as follows :
 * Posting class comments.
 * Viewing all students and teachers who joined a particular classroom.
 * Creating classwork with due-dates, topic and marks. 
-* Uploading assignment (any extension) material with classwork.
+* Uploading assignment (within size limit) material with classwork.
 * Viewing all posted assignments.
 * Accessing all student submissions for a particular posted classwork.
-* Downloading (any extension) student submissions.
+* Downloading (within size limit) student submissions.
 * Grading each student submission for a given classwork.
 * Displaying all student with marks for all posted classworks collectively along with their percentage.
 * Viewing vaccination status of students in a class.
@@ -32,7 +32,7 @@ The features available to student are as follows :
 * Viewing all students and teachers who joined a particular classroom.
 * Viewing all posted assignments for given classroom.
 * Viewing and downloading classwork material uploaded by teacher.
-* Uploading classwork-submission file (any extension) for each classwork.
+* Uploading classwork-submission file (within size limit) for each classwork.
 * Viewing vaccination status of all your classmates.
 * Creating weekly time-tables.
 * Creating discussion or study groups and joining them using unique group code.
