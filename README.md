@@ -21,8 +21,9 @@ You need only [XAMPP](https://www.apachefriends.org/index.html) to run this proj
   ```
 
 * Start the Apache & MySQL(or MariaDB) module in XAMPP Control Panel.
-* Go to phpmyadmin from your browser & import the database which is provided as a [SQL file](database/e_classrooms.sql) in the Project zip under Database folder.
-* Change the credentials in [config file](includes/config.php) to your username, server (usually localhost) and password.
+* Go to phpmyadmin from your browser `localhost:<your port>/phpmyadmin`
+* Create a new database `e_classrooms` and import the tables which is provided as a [SQL file](database/e_classrooms.sql) in the Project zip under Database folder.
+* Change the credentials in [config file](includes/config.php) to your username, server (usually localhost) and password, copy them from the `Apache Config` in the XAMPP UI.
 
 ## Build With
 
@@ -35,7 +36,10 @@ This is Web Development Project based on PHP. The Web Technology used are :
    * JQuery
    * MariaDB (or MySQL) (DataBase)
 
-## Features
+## Demo
+![demo-video](images/octocat-classes.gif)
+
+### Features
 The project provides standardized features for an online classroom. Below are some of the key features : 
 * Clean and easy to navigate UI.
 * Complete & seperate Register, Login & Working Panel for students and teachers.
